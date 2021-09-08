@@ -5,12 +5,1280 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Tiny Pogo AVR"
-Date "2021-08-27"
-Rev "0.1"
+Date "2021-09-08"
+Rev "1.0"
 Comp "Indie Robotics"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny44A-SSU U1
+U 1 1 6128E2F1
+P 3000 3750
+F 0 "U1" H 2470 3796 50  0000 R CNN
+F 1 "ATtiny44A-SSU" H 2470 3705 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3000 3750 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf" H 3000 3750 50  0001 C CNN
+	1    3000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 61290DDC
+P 3000 4750
+F 0 "#PWR06" H 3000 4500 50  0001 C CNN
+F 1 "GND" H 3005 4577 50  0000 C CNN
+F 2 "" H 3000 4750 50  0001 C CNN
+F 3 "" H 3000 4750 50  0001 C CNN
+	1    3000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L HRG-KICAD-SCHEM-LIB:TXB0101DCKR U3
+U 1 1 612928E5
+P 6750 3250
+F 0 "U3" H 6750 3665 50  0000 C CNN
+F 1 "TXB0101DCKR" H 6750 3574 50  0000 C CNN
+F 2 "HRG-KICAD-FOOTP-LIB:SC70-6" H 8200 3450 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/txb0101.pdf" H 6750 3600 50  0001 C CNN
+F 4 "no" H 6750 3250 50  0001 C CNN "Generic_Part"
+F 5 "Texas Instruments" H 8600 3550 50  0001 C CNN "Manufacturer"
+F 6 "TXB0101DCKR" H 8600 3550 50  0001 C CNN "Part_Number"
+F 7 "1-Bit Bidirectional Level-Shifting and Voltage Translator" H 8600 3550 50  0001 C CNN "Description"
+	1    6750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Mini J2
+U 1 1 6129474A
+P 8300 3750
+F 0 "J2" H 8070 3739 50  0000 R CNN
+F 1 "USB_B_Mini" H 8070 3648 50  0000 R CNN
+F 2 "HRG-KICAD-FOOTP-LIB:USB_Mini-B_Wuerth_65100516121_Horizontal" H 8450 3700 50  0001 C CNN
+F 3 "https://www.we-online.com/katalog/datasheet/65100516121.pdf" H 8450 3700 50  0001 C CNN
+	1    8300 3750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L HRG-KICAD-SCHEM-LIB:TXB0101DCKR U4
+U 1 1 612993AB
+P 6750 4250
+F 0 "U4" H 6750 4665 50  0000 C CNN
+F 1 "TXB0101DCKR" H 6750 4574 50  0000 C CNN
+F 2 "HRG-KICAD-FOOTP-LIB:SC70-6" H 8200 4450 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/txb0101.pdf" H 6750 4600 50  0001 C CNN
+F 4 "no" H 6750 4250 50  0001 C CNN "Generic_Part"
+F 5 "Texas Instruments" H 8600 4550 50  0001 C CNN "Manufacturer"
+F 6 "TXB0101DCKR" H 8600 4550 50  0001 C CNN "Part_Number"
+F 7 "1-Bit Bidirectional Level-Shifting and Voltage Translator" H 8600 4550 50  0001 C CNN "Description"
+	1    6750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR026
+U 1 1 61299E2C
+P 7900 3450
+F 0 "#PWR026" H 7900 3300 50  0001 C CNN
+F 1 "VBUS" H 7915 3623 50  0000 C CNN
+F 2 "" H 7900 3450 50  0001 C CNN
+F 3 "" H 7900 3450 50  0001 C CNN
+	1    7900 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4100 7200 4100
+Wire Wire Line
+	7200 4100 7200 4000
+Wire Wire Line
+	8000 3550 7900 3550
+Wire Wire Line
+	7900 3550 7900 3450
+Wire Wire Line
+	7100 3100 7200 3100
+Wire Wire Line
+	7200 3100 7200 3000
+$Comp
+L power:VBUS #PWR07
+U 1 1 6129BFE9
+P 4250 1500
+F 0 "#PWR07" H 4250 1350 50  0001 C CNN
+F 1 "VBUS" H 4265 1673 50  0000 C CNN
+F 2 "" H 4250 1500 50  0001 C CNN
+F 3 "" H 4250 1500 50  0001 C CNN
+	1    4250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1500 4250 1600
+Wire Wire Line
+	4250 1600 4550 1600
+$Comp
+L power:+3V3 #PWR012
+U 1 1 6129C8D2
+P 5750 1500
+F 0 "#PWR012" H 5750 1350 50  0001 C CNN
+F 1 "+3V3" H 5765 1673 50  0000 C CNN
+F 2 "" H 5750 1500 50  0001 C CNN
+F 3 "" H 5750 1500 50  0001 C CNN
+	1    5750 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1600 5750 1600
+Wire Wire Line
+	5750 1600 5750 1500
+$Comp
+L power:+3V3 #PWR021
+U 1 1 6129D808
+P 7200 3000
+F 0 "#PWR021" H 7200 2850 50  0001 C CNN
+F 1 "+3V3" H 7215 3173 50  0000 C CNN
+F 2 "" H 7200 3000 50  0001 C CNN
+F 3 "" H 7200 3000 50  0001 C CNN
+	1    7200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR022
+U 1 1 6129EE26
+P 7200 4000
+F 0 "#PWR022" H 7200 3850 50  0001 C CNN
+F 1 "+3V3" H 7215 4173 50  0000 C CNN
+F 2 "" H 7200 4000 50  0001 C CNN
+F 3 "" H 7200 4000 50  0001 C CNN
+	1    7200 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4100 6300 4100
+Wire Wire Line
+	6300 4100 6300 4000
+Wire Wire Line
+	6400 3100 6300 3100
+Wire Wire Line
+	6300 3100 6300 3000
+Wire Wire Line
+	3000 2850 3000 2750
+Wire Wire Line
+	3000 4750 3000 4650
+$Comp
+L power:GND #PWR015
+U 1 1 6129FF18
+P 6300 3250
+F 0 "#PWR015" H 6300 3000 50  0001 C CNN
+F 1 "GND" V 6305 3122 50  0000 R CNN
+F 2 "" H 6300 3250 50  0001 C CNN
+F 3 "" H 6300 3250 50  0001 C CNN
+	1    6300 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6300 3250 6400 3250
+Wire Wire Line
+	7100 3400 7700 3400
+Wire Wire Line
+	7700 3400 7700 3750
+Wire Wire Line
+	7700 3750 8000 3750
+Wire Wire Line
+	8000 3850 7700 3850
+Wire Wire Line
+	7700 3850 7700 4400
+Wire Wire Line
+	7700 4400 7100 4400
+Wire Wire Line
+	6400 3400 5750 3400
+Wire Wire Line
+	6400 4400 5750 4400
+Text Label 5750 4400 0    50   ~ 0
+D-
+Text Label 5750 3400 0    50   ~ 0
+D+
+$Comp
+L power:GND #PWR017
+U 1 1 612A2150
+P 6300 4250
+F 0 "#PWR017" H 6300 4000 50  0001 C CNN
+F 1 "GND" V 6305 4122 50  0000 R CNN
+F 2 "" H 6300 4250 50  0001 C CNN
+F 3 "" H 6300 4250 50  0001 C CNN
+	1    6300 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6300 4250 6400 4250
+$Comp
+L power:GND #PWR010
+U 1 1 612A2F0E
+P 4550 2000
+F 0 "#PWR010" H 4550 1750 50  0001 C CNN
+F 1 "GND" H 4555 1827 50  0000 C CNN
+F 2 "" H 4550 2000 50  0001 C CNN
+F 3 "" H 4550 2000 50  0001 C CNN
+	1    4550 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2000 4550 1900
+$Comp
+L power:GND #PWR030
+U 1 1 612A34E8
+P 8300 4250
+F 0 "#PWR030" H 8300 4000 50  0001 C CNN
+F 1 "GND" H 8305 4077 50  0000 C CNN
+F 2 "" H 8300 4250 50  0001 C CNN
+F 3 "" H 8300 4250 50  0001 C CNN
+	1    8300 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 4250 8300 4150
+NoConn ~ 8400 4150
+NoConn ~ 8000 3950
+$Comp
+L HRG-KICAD-SCHEM-LIB:MIC5317-3.3YM5-TR U2
+U 1 1 612A5BCF
+P 5000 1750
+F 0 "U2" H 5000 2165 50  0000 C CNN
+F 1 "MIC5317-3.3YM5-TR" H 5150 1400 50  0000 C CNN
+F 2 "HRG-KICAD-FOOTP-LIB:SOT-23-5" H 6500 1950 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC5317.pdf" H 5200 1450 50  0001 C CNN
+F 4 "Microchip" H 7450 2100 50  0001 C CNN "Manufacturer"
+F 5 "MIC5317-3.3YM5-TR" H 7450 2100 50  0001 C CNN "Part Number"
+F 6 "no" H 7450 2100 50  0001 C CNN "Generic Part"
+F 7 "Fixed LDO Voltage Regulator, 2.5V to 6V, 155mV drop, 3.3V/150mA out, SOT-23-5" H 7450 2100 50  0001 C CNN "Description"
+	1    5000 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 1900 4650 1900
+Wire Wire Line
+	4650 1750 4550 1750
+Wire Wire Line
+	4550 1750 4550 1600
+Connection ~ 4550 1600
+Wire Wire Line
+	4550 1600 4650 1600
+$Comp
+L KEMET_SMD:1u_0603 C1
+U 1 1 612AD424
+P 2500 1750
+F 0 "C1" H 2615 1796 50  0000 L CNN
+F 1 "1u" H 2615 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3400 1650 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C105K8RACTU.pdf" H 2500 1750 50  0001 C CNN
+F 4 "C0603C105K8RACTU" H 3150 1950 50  0001 C CNN "Part Number"
+F 5 "no" H 2800 1550 50  0001 C CNN "Generic Part"
+F 6 "1u, 0603, X7R, 10V" H 3150 1850 50  0001 C CNN "Description"
+F 7 "KEMET" H 2900 1450 50  0001 C CNN "Manufacturer"
+	1    2500 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C2
+U 1 1 612ADFED
+P 3000 1750
+F 0 "C2" H 3115 1796 50  0000 L CNN
+F 1 "100n" H 3115 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3900 1650 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 3000 1750 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 3650 1950 50  0001 C CNN "Part Number"
+F 5 "no" H 3300 1550 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 3650 1850 50  0001 C CNN "Description"
+F 7 "KEMET" H 3400 1450 50  0001 C CNN "Manufacturer"
+	1    3000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:1u_0603 C3
+U 1 1 612AE7D3
+P 4250 1800
+F 0 "C3" H 4365 1846 50  0000 L CNN
+F 1 "1u" H 4365 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5150 1700 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C105K8RACTU.pdf" H 4250 1800 50  0001 C CNN
+F 4 "C0603C105K8RACTU" H 4900 2000 50  0001 C CNN "Part Number"
+F 5 "no" H 4550 1600 50  0001 C CNN "Generic Part"
+F 6 "1u, 0603, X7R, 10V" H 4900 1900 50  0001 C CNN "Description"
+F 7 "KEMET" H 4650 1500 50  0001 C CNN "Manufacturer"
+	1    4250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:1u_0603 C4
+U 1 1 612AF4FA
+P 5750 1800
+F 0 "C4" H 5865 1846 50  0000 L CNN
+F 1 "1u" H 5865 1755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6650 1700 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C105K8RACTU.pdf" H 5750 1800 50  0001 C CNN
+F 4 "C0603C105K8RACTU" H 6400 2000 50  0001 C CNN "Part Number"
+F 5 "no" H 6050 1600 50  0001 C CNN "Generic Part"
+F 6 "1u, 0603, X7R, 10V" H 6400 1900 50  0001 C CNN "Description"
+F 7 "KEMET" H 6150 1500 50  0001 C CNN "Manufacturer"
+	1    5750 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C5
+U 1 1 612B0428
+P 6750 1750
+F 0 "C5" H 6865 1796 50  0000 L CNN
+F 1 "100n" H 6865 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7650 1650 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 6750 1750 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 7400 1950 50  0001 C CNN "Part Number"
+F 5 "no" H 7050 1550 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 7400 1850 50  0001 C CNN "Description"
+F 7 "KEMET" H 7150 1450 50  0001 C CNN "Manufacturer"
+	1    6750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C6
+U 1 1 612B10CA
+P 7200 1750
+F 0 "C6" H 7315 1796 50  0000 L CNN
+F 1 "100n" H 7315 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8100 1650 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 7200 1750 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 7850 1950 50  0001 C CNN "Part Number"
+F 5 "no" H 7500 1550 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 7850 1850 50  0001 C CNN "Description"
+F 7 "KEMET" H 7600 1450 50  0001 C CNN "Manufacturer"
+	1    7200 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C7
+U 1 1 612B2248
+P 7700 1750
+F 0 "C7" H 7815 1796 50  0000 L CNN
+F 1 "100n" H 7815 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8600 1650 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 7700 1750 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 8350 1950 50  0001 C CNN "Part Number"
+F 5 "no" H 8000 1550 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 8350 1850 50  0001 C CNN "Description"
+F 7 "KEMET" H 8100 1450 50  0001 C CNN "Manufacturer"
+	1    7700 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C8
+U 1 1 612B2446
+P 8150 1750
+F 0 "C8" H 8265 1796 50  0000 L CNN
+F 1 "100n" H 8265 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9050 1650 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 8150 1750 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 8800 1950 50  0001 C CNN "Part Number"
+F 5 "no" H 8450 1550 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 8800 1850 50  0001 C CNN "Description"
+F 7 "KEMET" H 8550 1450 50  0001 C CNN "Manufacturer"
+	1    8150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Kingbright:LED_Red_0603 D1
+U 1 1 612B3678
+P 9250 3500
+F 0 "D1" V 9289 3382 50  0000 R CNN
+F 1 "LED_Red" V 9198 3382 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 10300 3850 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SRCPRV-226086.pdf" H 9250 3500 50  0001 C CNN
+F 4 "APT1608SRCPRV" H 9900 3750 50  0001 C CNN "Part Number"
+F 5 "no" H 9700 3650 50  0001 C CNN "Generic Part"
+F 6 "Red 0603 LED" H 9950 3550 50  0001 C CNN "Description"
+F 7 "Kingbright" H 9850 3450 50  0001 C CNN "Manufacturer"
+	1    9250 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R4
+U 1 1 612B4AC0
+P 9250 4000
+F 0 "R4" H 9320 4046 50  0000 L CNN
+F 1 "330R" H 9320 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10100 4050 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 9250 4000 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 9900 4250 50  0001 C CNN "Part Number"
+F 5 "no" H 9550 3800 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 9900 4150 50  0001 C CNN "Description"
+F 7 "Vishay" H 9600 3950 50  0001 C CNN "Manufacturer"
+	1    9250 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR031
+U 1 1 612B53EF
+P 9250 3250
+F 0 "#PWR031" H 9250 3100 50  0001 C CNN
+F 1 "VBUS" H 9265 3423 50  0000 C CNN
+F 2 "" H 9250 3250 50  0001 C CNN
+F 3 "" H 9250 3250 50  0001 C CNN
+	1    9250 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR032
+U 1 1 612B5ACF
+P 9250 4250
+F 0 "#PWR032" H 9250 4000 50  0001 C CNN
+F 1 "GND" H 9255 4077 50  0000 C CNN
+F 2 "" H 9250 4250 50  0001 C CNN
+F 3 "" H 9250 4250 50  0001 C CNN
+	1    9250 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 4250 9250 4150
+Wire Wire Line
+	9250 3850 9250 3650
+Wire Wire Line
+	9250 3350 9250 3250
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 612C44DD
+P 4200 5750
+F 0 "J1" H 4250 6067 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 4250 5976 50  0000 C CNN
+F 2 "HRG-KICAD-FOOTP-LIB:PogoPin 2x6" H 4200 5750 50  0001 C CNN
+F 3 "~" H 4200 5750 50  0001 C CNN
+	1    4200 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5750 3500 5750
+Wire Wire Line
+	4500 5750 5000 5750
+Wire Wire Line
+	5000 5850 4500 5850
+Wire Wire Line
+	5000 5650 4500 5650
+$Comp
+L power:GND #PWR03
+U 1 1 612CEA28
+P 3750 5950
+F 0 "#PWR03" H 3750 5700 50  0001 C CNN
+F 1 "GND" H 3755 5777 50  0000 C CNN
+F 2 "" H 3750 5950 50  0001 C CNN
+F 3 "" H 3750 5950 50  0001 C CNN
+	1    3750 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5950 3750 5850
+Wire Wire Line
+	4000 5850 3750 5850
+Text Label 3500 5750 0    50   ~ 0
+MOSI
+Text Label 5000 5650 2    50   ~ 0
+MISO
+Text Label 5000 5750 2    50   ~ 0
+SCK
+Text Label 5000 5850 2    50   ~ 0
+RST
+Wire Wire Line
+	3600 3550 4000 3550
+Wire Wire Line
+	4000 3450 3600 3450
+Wire Wire Line
+	4000 3650 3600 3650
+Text Label 4000 3650 2    50   ~ 0
+MISO
+Text Label 4000 3550 2    50   ~ 0
+SCK
+Text Label 4000 3450 2    50   ~ 0
+RST
+Wire Wire Line
+	3600 3750 4000 3750
+Text Label 4000 3750 2    50   ~ 0
+MOSI
+Wire Wire Line
+	3600 3150 4000 3150
+Text Label 4000 3150 2    50   ~ 0
+D-
+Text Label 4000 3850 2    50   ~ 0
+D+
+$Comp
+L Vishay_Res_SMD:0R_0603 R1
+U 1 1 612DE420
+P 4000 4350
+F 0 "R1" V 4100 4400 50  0000 C CNN
+F 1 "0R" V 4100 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4850 4400 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/427/crcwhpe3-1713858.pdf" H 4000 4350 50  0001 C CNN
+F 4 "CRCW06030000Z0EAHP" H 4650 4600 50  0001 C CNN "Part Number"
+F 5 "no" H 4300 4150 50  0001 C CNN "Generic Part"
+F 6 "0R, 0603, 1%, 0.33W" H 4650 4500 50  0001 C CNN "Description"
+F 7 "Vishay" H 4350 4300 50  0001 C CNN "Manufacturer"
+	1    4000 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 4350 3750 4350
+Wire Wire Line
+	4250 4350 4150 4350
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 612E2210
+P 4000 4600
+F 0 "JP1" H 4000 4400 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 4000 4500 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 4000 4600 50  0001 C CNN
+F 3 "~" H 4000 4600 50  0001 C CNN
+	1    4000 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4600 3750 4600
+Wire Wire Line
+	3750 4600 3750 4350
+Connection ~ 3750 4350
+Wire Wire Line
+	3750 4350 3600 4350
+Text Label 4550 4600 2    50   ~ 0
+RST
+Wire Wire Line
+	4550 4600 4150 4600
+Wire Wire Line
+	3600 4250 3700 4250
+Wire Wire Line
+	3700 4250 3700 3850
+Wire Wire Line
+	3700 3850 3600 3850
+Wire Wire Line
+	4000 3850 3700 3850
+Connection ~ 3700 3850
+$Comp
+L Device:Resonator Y1
+U 1 1 61309179
+P 5500 5250
+F 0 "Y1" H 5500 5498 50  0000 C CNN
+F 1 "20MHz" H 5500 5407 50  0000 C CNN
+F 2 "Crystal:Resonator_muRata_DSS6-3Pin_W7.0mm_H2.5mm" H 5475 5250 50  0001 C CNN
+F 3 "https://www.farnell.com/datasheets/95544.pdf" H 5475 5250 50  0001 C CNN
+F 4 "C20M000000L001" H 5500 5250 50  0001 C CNN "Part Number"
+F 5 "AEL" H 5500 5250 50  0001 C CNN "Manufacturer"
+F 6 "Resonator, Ceramic, 20 MHz, 3 Pin, ± 0.5%, AEL ZTT Series" H 5500 5250 50  0001 C CNN "Description"
+	1    5500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4050 4000 4050
+Wire Wire Line
+	3600 4150 4000 4150
+Text Label 4000 4050 2    50   ~ 0
+XTAL1
+Text Label 4000 4150 2    50   ~ 0
+XTAL2
+Wire Wire Line
+	5350 5250 4950 5250
+Wire Wire Line
+	5650 5250 6050 5250
+Text Label 4950 5250 0    50   ~ 0
+XTAL1
+Text Label 6050 5250 2    50   ~ 0
+XTAL2
+$Comp
+L power:GND #PWR011
+U 1 1 6137AE68
+P 5500 5550
+F 0 "#PWR011" H 5500 5300 50  0001 C CNN
+F 1 "GND" H 5505 5377 50  0000 C CNN
+F 2 "" H 5500 5550 50  0001 C CNN
+F 3 "" H 5500 5550 50  0001 C CNN
+	1    5500 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5550 5500 5450
+NoConn ~ 3600 3250
+NoConn ~ 3600 3350
+$Comp
+L power:GND #PWR08
+U 1 1 61382868
+P 4250 2050
+F 0 "#PWR08" H 4250 1800 50  0001 C CNN
+F 1 "GND" H 4255 1877 50  0000 C CNN
+F 2 "" H 4250 2050 50  0001 C CNN
+F 3 "" H 4250 2050 50  0001 C CNN
+	1    4250 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2050 4250 1950
+$Comp
+L power:GND #PWR013
+U 1 1 613841C2
+P 5750 2050
+F 0 "#PWR013" H 5750 1800 50  0001 C CNN
+F 1 "GND" H 5755 1877 50  0000 C CNN
+F 2 "" H 5750 2050 50  0001 C CNN
+F 3 "" H 5750 2050 50  0001 C CNN
+	1    5750 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2050 5750 1950
+$Comp
+L power:GND #PWR029
+U 1 1 61385D02
+P 8150 2000
+F 0 "#PWR029" H 8150 1750 50  0001 C CNN
+F 1 "GND" H 8155 1827 50  0000 C CNN
+F 2 "" H 8150 2000 50  0001 C CNN
+F 3 "" H 8150 2000 50  0001 C CNN
+	1    8150 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2000 8150 1950
+$Comp
+L power:GND #PWR04
+U 1 1 613875EA
+P 3000 2000
+F 0 "#PWR04" H 3000 1750 50  0001 C CNN
+F 1 "GND" H 3005 1827 50  0000 C CNN
+F 2 "" H 3000 2000 50  0001 C CNN
+F 3 "" H 3000 2000 50  0001 C CNN
+	1    3000 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2000 3000 1950
+Wire Wire Line
+	2500 1500 2500 1550
+Wire Wire Line
+	2500 1550 3000 1550
+Wire Wire Line
+	3000 1550 3000 1600
+Connection ~ 2500 1550
+Wire Wire Line
+	2500 1550 2500 1600
+Wire Wire Line
+	3000 1950 2500 1950
+Wire Wire Line
+	2500 1950 2500 1900
+Connection ~ 3000 1950
+Wire Wire Line
+	3000 1950 3000 1900
+Wire Wire Line
+	4250 1600 4250 1650
+Connection ~ 4250 1600
+Wire Wire Line
+	5750 1650 5750 1600
+Connection ~ 5750 1600
+$Comp
+L power:VBUS #PWR018
+U 1 1 61392AE4
+P 6750 1500
+F 0 "#PWR018" H 6750 1350 50  0001 C CNN
+F 1 "VBUS" H 6765 1673 50  0000 C CNN
+F 2 "" H 6750 1500 50  0001 C CNN
+F 3 "" H 6750 1500 50  0001 C CNN
+	1    6750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 61394B0E
+P 7200 2000
+F 0 "#PWR020" H 7200 1750 50  0001 C CNN
+F 1 "GND" H 7205 1827 50  0000 C CNN
+F 2 "" H 7200 2000 50  0001 C CNN
+F 3 "" H 7200 2000 50  0001 C CNN
+	1    7200 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2000 7200 1950
+Wire Wire Line
+	7700 1600 7700 1550
+$Comp
+L power:+3V3 #PWR025
+U 1 1 61396FA3
+P 7700 1500
+F 0 "#PWR025" H 7700 1350 50  0001 C CNN
+F 1 "+3V3" H 7715 1673 50  0000 C CNN
+F 2 "" H 7700 1500 50  0001 C CNN
+F 3 "" H 7700 1500 50  0001 C CNN
+	1    7700 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1550 8150 1550
+Wire Wire Line
+	8150 1550 8150 1600
+Connection ~ 7700 1550
+Wire Wire Line
+	7700 1550 7700 1500
+Wire Wire Line
+	8150 1950 7700 1950
+Wire Wire Line
+	7700 1950 7700 1900
+Connection ~ 8150 1950
+Wire Wire Line
+	8150 1950 8150 1900
+Wire Wire Line
+	7200 1950 6750 1950
+Wire Wire Line
+	6750 1950 6750 1900
+Connection ~ 7200 1950
+Wire Wire Line
+	7200 1950 7200 1900
+Wire Wire Line
+	7200 1600 7200 1550
+Wire Wire Line
+	7200 1550 6750 1550
+Wire Wire Line
+	6750 1550 6750 1500
+Wire Wire Line
+	6750 1600 6750 1550
+Connection ~ 6750 1550
+$Comp
+L Vishay_Res_SMD:10K_0603 R2
+U 1 1 613A4FA3
+P 7450 3000
+F 0 "R2" H 7520 3046 50  0000 L CNN
+F 1 "10K" H 7520 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8300 3050 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 7450 3000 50  0001 C CNN
+F 4 "CRCW060310K0FKEAHP" H 8100 3250 50  0001 C CNN "Part Number"
+F 5 "no" H 7750 2800 50  0001 C CNN "Generic Part"
+F 6 "10K, 0603, 1%, 0.33W" H 8100 3150 50  0001 C CNN "Description"
+F 7 "Vishay" H 7800 2950 50  0001 C CNN "Manufacturer"
+	1    7450 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vishay_Res_SMD:10K_0603 R3
+U 1 1 613A5DEA
+P 7450 4000
+F 0 "R3" H 7520 4046 50  0000 L CNN
+F 1 "10K" H 7520 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8300 4050 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 7450 4000 50  0001 C CNN
+F 4 "CRCW060310K0FKEAHP" H 8100 4250 50  0001 C CNN "Part Number"
+F 5 "no" H 7750 3800 50  0001 C CNN "Generic Part"
+F 6 "10K, 0603, 1%, 0.33W" H 8100 4150 50  0001 C CNN "Description"
+F 7 "Vishay" H 7800 3950 50  0001 C CNN "Manufacturer"
+	1    7450 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4250 7450 4250
+Wire Wire Line
+	7450 4250 7450 4150
+Wire Wire Line
+	7100 3250 7450 3250
+Wire Wire Line
+	7450 3250 7450 3150
+$Comp
+L power:VBUS #PWR024
+U 1 1 613AED33
+P 7450 3750
+F 0 "#PWR024" H 7450 3600 50  0001 C CNN
+F 1 "VBUS" H 7465 3923 50  0000 C CNN
+F 2 "" H 7450 3750 50  0001 C CNN
+F 3 "" H 7450 3750 50  0001 C CNN
+	1    7450 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR023
+U 1 1 613AFAAD
+P 7450 2750
+F 0 "#PWR023" H 7450 2600 50  0001 C CNN
+F 1 "VBUS" H 7465 2923 50  0000 C CNN
+F 2 "" H 7450 2750 50  0001 C CNN
+F 3 "" H 7450 2750 50  0001 C CNN
+	1    7450 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2850 7450 2750
+Wire Wire Line
+	7450 3850 7450 3750
+$Comp
+L power:VCC #PWR05
+U 1 1 613B8D7D
+P 3000 2750
+F 0 "#PWR05" H 3000 2600 50  0001 C CNN
+F 1 "VCC" H 3015 2923 50  0000 C CNN
+F 2 "" H 3000 2750 50  0001 C CNN
+F 3 "" H 3000 2750 50  0001 C CNN
+	1    3000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR014
+U 1 1 613C1B7E
+P 6300 3000
+F 0 "#PWR014" H 6300 2850 50  0001 C CNN
+F 1 "VCC" H 6315 3173 50  0000 C CNN
+F 2 "" H 6300 3000 50  0001 C CNN
+F 3 "" H 6300 3000 50  0001 C CNN
+	1    6300 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR09
+U 1 1 613D41E2
+P 4250 4350
+F 0 "#PWR09" H 4250 4200 50  0001 C CNN
+F 1 "VCC" V 4265 4478 50  0000 L CNN
+F 2 "" H 4250 4350 50  0001 C CNN
+F 3 "" H 4250 4350 50  0001 C CNN
+	1    4250 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR027
+U 1 1 613DCDD3
+P 8050 5200
+F 0 "#PWR027" H 8050 5050 50  0001 C CNN
+F 1 "+3V3" V 8065 5328 50  0000 L CNN
+F 2 "" H 8050 5200 50  0001 C CNN
+F 3 "" H 8050 5200 50  0001 C CNN
+	1    8050 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VBUS #PWR028
+U 1 1 613E1241
+P 8050 5400
+F 0 "#PWR028" H 8050 5250 50  0001 C CNN
+F 1 "VBUS" V 8065 5528 50  0000 L CNN
+F 2 "" H 8050 5400 50  0001 C CNN
+F 3 "" H 8050 5400 50  0001 C CNN
+	1    8050 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 6139AD35
+P 7750 5300
+F 0 "SW2" H 7750 5585 50  0000 C CNN
+F 1 "SW_SPDT" H 7750 5494 50  0000 C CNN
+F 2 "HRG-KICAD-FOOTP-LIB:CAS-120-B-type" H 7750 5300 50  0001 C CNN
+F 3 "https://www.farnell.com/datasheets/2705275.pdf" H 7750 5300 50  0001 C CNN
+F 4 "CAS-120TB" H 7750 5300 50  0001 C CNN "Part Number"
+F 5 "NIDEC" H 7750 5300 50  0001 C CNN "Manufacturer"
+F 6 "Slide Switch, SPDT, On-On, Surface Mount, CAS Series, 100 mA" H 7750 5300 50  0001 C CNN "Description"
+	1    7750 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5200 7500 5300
+Wire Wire Line
+	7950 5200 8050 5200
+Wire Wire Line
+	8050 5400 7950 5400
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 613A42F1
+P 7250 5400
+F 0 "SW1" H 7250 5685 50  0000 C CNN
+F 1 "SW_SPDT" H 7250 5594 50  0000 C CNN
+F 2 "HRG-KICAD-FOOTP-LIB:CAS-120-B-type" H 7250 5400 50  0001 C CNN
+F 3 "https://www.farnell.com/datasheets/2705275.pdf" H 7250 5400 50  0001 C CNN
+F 4 "CAS-120TB" H 7250 5400 50  0001 C CNN "Part Number"
+F 5 "NIDEC" H 7250 5400 50  0001 C CNN "Manufacturer"
+F 6 "Slide Switch, SPDT, On-On, Surface Mount, CAS Series, 100 mA" H 7250 5400 50  0001 C CNN "Description"
+	1    7250 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 5300 7500 5300
+NoConn ~ 7450 5500
+$Comp
+L Kingbright:LED_Red_0603 D2
+U 1 1 613B49CD
+P 10000 3500
+F 0 "D2" V 10039 3382 50  0000 R CNN
+F 1 "LED_Red" V 9948 3382 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 11050 3850 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SRCPRV-226086.pdf" H 10000 3500 50  0001 C CNN
+F 4 "APT1608SRCPRV" H 10650 3750 50  0001 C CNN "Part Number"
+F 5 "no" H 10450 3650 50  0001 C CNN "Generic Part"
+F 6 "Red 0603 LED" H 10700 3550 50  0001 C CNN "Description"
+F 7 "Kingbright" H 10600 3450 50  0001 C CNN "Manufacturer"
+	1    10000 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R5
+U 1 1 613B4DFD
+P 10000 4000
+F 0 "R5" H 10070 4046 50  0000 L CNN
+F 1 "330R" H 10070 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10850 4050 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 10000 4000 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 10650 4250 50  0001 C CNN "Part Number"
+F 5 "no" H 10300 3800 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 10650 4150 50  0001 C CNN "Description"
+F 7 "Vishay" H 10350 3950 50  0001 C CNN "Manufacturer"
+	1    10000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 613B4E11
+P 10000 4250
+F 0 "#PWR0101" H 10000 4000 50  0001 C CNN
+F 1 "GND" H 10005 4077 50  0000 C CNN
+F 2 "" H 10000 4250 50  0001 C CNN
+F 3 "" H 10000 4250 50  0001 C CNN
+	1    10000 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 4250 10000 4150
+Wire Wire Line
+	10000 3850 10000 3650
+$Comp
+L power:VCC #PWR016
+U 1 1 613C80E7
+P 6300 4000
+F 0 "#PWR016" H 6300 3850 50  0001 C CNN
+F 1 "VCC" H 6315 4173 50  0000 C CNN
+F 2 "" H 6300 4000 50  0001 C CNN
+F 3 "" H 6300 4000 50  0001 C CNN
+	1    6300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J3
+U 1 1 613C1DDD
+P 4200 6750
+F 0 "J3" H 4250 7067 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 4250 6976 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 4200 6750 50  0001 C CNN
+F 3 "~" H 4200 6750 50  0001 C CNN
+	1    4200 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6750 3500 6750
+Wire Wire Line
+	4500 6750 5000 6750
+Wire Wire Line
+	5000 6850 4500 6850
+Wire Wire Line
+	5000 6650 4500 6650
+$Comp
+L power:GND #PWR0103
+U 1 1 613C225E
+P 3750 6950
+F 0 "#PWR0103" H 3750 6700 50  0001 C CNN
+F 1 "GND" H 3755 6777 50  0000 C CNN
+F 2 "" H 3750 6950 50  0001 C CNN
+F 3 "" H 3750 6950 50  0001 C CNN
+	1    3750 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 6950 3750 6850
+Wire Wire Line
+	4000 6850 3750 6850
+Text Label 3500 6750 0    50   ~ 0
+MOSI
+Text Label 5000 6650 2    50   ~ 0
+MISO
+Text Label 5000 6750 2    50   ~ 0
+SCK
+Text Label 5000 6850 2    50   ~ 0
+RST
+$Comp
+L power:VCC #PWR0105
+U 1 1 6140EA0F
+P 2500 1500
+F 0 "#PWR0105" H 2500 1350 50  0001 C CNN
+F 1 "VCC" H 2515 1673 50  0000 C CNN
+F 2 "" H 2500 1500 50  0001 C CNN
+F 3 "" H 2500 1500 50  0001 C CNN
+	1    2500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 61390E76
+P 9250 5300
+F 0 "H1" H 9350 5349 50  0000 L CNN
+F 1 "MH_M3" H 9350 5258 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9250 5300 50  0001 C CNN
+F 3 "~" H 9250 5300 50  0001 C CNN
+	1    9250 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 61391583
+P 9250 5500
+F 0 "#PWR01" H 9250 5250 50  0001 C CNN
+F 1 "GND" H 9255 5327 50  0000 C CNN
+F 2 "" H 9250 5500 50  0001 C CNN
+F 3 "" H 9250 5500 50  0001 C CNN
+	1    9250 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 5500 9250 5400
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 613955A0
+P 9750 5300
+F 0 "H2" H 9850 5349 50  0000 L CNN
+F 1 "MH_M3" H 9850 5258 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 5300 50  0001 C CNN
+F 3 "~" H 9750 5300 50  0001 C CNN
+	1    9750 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR033
+U 1 1 61395A60
+P 9750 5500
+F 0 "#PWR033" H 9750 5250 50  0001 C CNN
+F 1 "GND" H 9755 5327 50  0000 C CNN
+F 2 "" H 9750 5500 50  0001 C CNN
+F 3 "" H 9750 5500 50  0001 C CNN
+	1    9750 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 5500 9750 5400
+Connection ~ 7500 5300
+Wire Wire Line
+	7500 5300 7550 5300
+$Comp
+L power:VCC #PWR036
+U 1 1 613B41C7
+P 7500 5200
+F 0 "#PWR036" H 7500 5050 50  0001 C CNN
+F 1 "VCC" H 7515 5373 50  0000 C CNN
+F 2 "" H 7500 5200 50  0001 C CNN
+F 3 "" H 7500 5200 50  0001 C CNN
+	1    7500 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 5400 6500 5400
+Text Label 6500 5400 0    50   ~ 0
+TARGET_VCC
+Wire Wire Line
+	4050 5650 4000 5650
+Text Label 3500 5650 0    50   ~ 0
+TARGET_VCC
+Connection ~ 4000 5650
+Wire Wire Line
+	4000 5650 3500 5650
+Text Label 3500 6650 0    50   ~ 0
+TARGET_VCC
+Wire Wire Line
+	3500 6650 4000 6650
+$Comp
+L Kingbright:LED_Green_0603 D3
+U 1 1 613E18D1
+P 1750 5750
+F 0 "D3" H 1743 5495 50  0000 C CNN
+F 1 "LED_Green" H 1743 5586 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2800 6100 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 1750 5750 50  0001 C CNN
+F 4 "APT1608SGC" H 2400 6000 50  0001 C CNN "Part Number"
+F 5 "no" H 2200 5900 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 2450 5800 50  0001 C CNN "Description"
+F 7 "Kingbright" H 2350 5700 50  0001 C CNN "Manufacturer"
+	1    1750 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R6
+U 1 1 613E2DD5
+P 2250 5750
+F 0 "R6" V 2043 5750 50  0000 C CNN
+F 1 "330R" V 2134 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3100 5800 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 2250 5750 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 2900 6000 50  0001 C CNN "Part Number"
+F 5 "no" H 2550 5550 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 2900 5900 50  0001 C CNN "Description"
+F 7 "Vishay" H 2600 5700 50  0001 C CNN "Manufacturer"
+	1    2250 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 613E3AF4
+P 2600 5750
+F 0 "#PWR02" H 2600 5500 50  0001 C CNN
+F 1 "GND" V 2605 5622 50  0000 R CNN
+F 2 "" H 2600 5750 50  0001 C CNN
+F 3 "" H 2600 5750 50  0001 C CNN
+	1    2600 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 5750 1600 5750
+Wire Wire Line
+	1900 5750 2100 5750
+Wire Wire Line
+	2400 5750 2600 5750
+$Comp
+L Kingbright:LED_Green_0603 D4
+U 1 1 613F117D
+P 1750 6250
+F 0 "D4" H 1743 5995 50  0000 C CNN
+F 1 "LED_Green" H 1743 6086 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2800 6600 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 1750 6250 50  0001 C CNN
+F 4 "APT1608SGC" H 2400 6500 50  0001 C CNN "Part Number"
+F 5 "no" H 2200 6400 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 2450 6300 50  0001 C CNN "Description"
+F 7 "Kingbright" H 2350 6200 50  0001 C CNN "Manufacturer"
+	1    1750 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R7
+U 1 1 613F1187
+P 2250 6250
+F 0 "R7" V 2043 6250 50  0000 C CNN
+F 1 "330R" V 2134 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3100 6300 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 2250 6250 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 2900 6500 50  0001 C CNN "Part Number"
+F 5 "no" H 2550 6050 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 2900 6400 50  0001 C CNN "Description"
+F 7 "Vishay" H 2600 6200 50  0001 C CNN "Manufacturer"
+	1    2250 6250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 613F118D
+P 2600 6250
+F 0 "#PWR019" H 2600 6000 50  0001 C CNN
+F 1 "GND" V 2605 6122 50  0000 R CNN
+F 2 "" H 2600 6250 50  0001 C CNN
+F 3 "" H 2600 6250 50  0001 C CNN
+	1    2600 6250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 6250 1600 6250
+Wire Wire Line
+	1900 6250 2100 6250
+Wire Wire Line
+	2400 6250 2600 6250
+$Comp
+L Kingbright:LED_Green_0603 D5
+U 1 1 613F602F
+P 1750 6750
+F 0 "D5" H 1743 6495 50  0000 C CNN
+F 1 "LED_Green" H 1743 6586 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2800 7100 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 1750 6750 50  0001 C CNN
+F 4 "APT1608SGC" H 2400 7000 50  0001 C CNN "Part Number"
+F 5 "no" H 2200 6900 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 2450 6800 50  0001 C CNN "Description"
+F 7 "Kingbright" H 2350 6700 50  0001 C CNN "Manufacturer"
+	1    1750 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R8
+U 1 1 613F6039
+P 2250 6750
+F 0 "R8" V 2043 6750 50  0000 C CNN
+F 1 "330R" V 2134 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3100 6800 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 2250 6750 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 2900 7000 50  0001 C CNN "Part Number"
+F 5 "no" H 2550 6550 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 2900 6900 50  0001 C CNN "Description"
+F 7 "Vishay" H 2600 6700 50  0001 C CNN "Manufacturer"
+	1    2250 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 613F603F
+P 2600 6750
+F 0 "#PWR034" H 2600 6500 50  0001 C CNN
+F 1 "GND" V 2605 6622 50  0000 R CNN
+F 2 "" H 2600 6750 50  0001 C CNN
+F 3 "" H 2600 6750 50  0001 C CNN
+	1    2600 6750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 6750 1600 6750
+Wire Wire Line
+	1900 6750 2100 6750
+Wire Wire Line
+	2400 6750 2600 6750
+$Comp
+L Kingbright:LED_Green_0603 D6
+U 1 1 613FB19E
+P 1750 7250
+F 0 "D6" H 1743 6995 50  0000 C CNN
+F 1 "LED_Green" H 1743 7086 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2800 7600 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 1750 7250 50  0001 C CNN
+F 4 "APT1608SGC" H 2400 7500 50  0001 C CNN "Part Number"
+F 5 "no" H 2200 7400 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 2450 7300 50  0001 C CNN "Description"
+F 7 "Kingbright" H 2350 7200 50  0001 C CNN "Manufacturer"
+	1    1750 7250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R9
+U 1 1 613FB1A8
+P 2250 7250
+F 0 "R9" V 2043 7250 50  0000 C CNN
+F 1 "330R" V 2134 7250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3100 7300 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 2250 7250 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 2900 7500 50  0001 C CNN "Part Number"
+F 5 "no" H 2550 7050 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 2900 7400 50  0001 C CNN "Description"
+F 7 "Vishay" H 2600 7200 50  0001 C CNN "Manufacturer"
+	1    2250 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 613FB1AE
+P 2600 7250
+F 0 "#PWR035" H 2600 7000 50  0001 C CNN
+F 1 "GND" V 2605 7122 50  0000 R CNN
+F 2 "" H 2600 7250 50  0001 C CNN
+F 3 "" H 2600 7250 50  0001 C CNN
+	1    2600 7250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 7250 1600 7250
+Wire Wire Line
+	1900 7250 2100 7250
+Wire Wire Line
+	2400 7250 2600 7250
+Text Label 1000 5750 0    50   ~ 0
+MISO
+Text Label 1000 6250 0    50   ~ 0
+MOSI
+Text Label 1000 6750 0    50   ~ 0
+SCK
+Text Label 1000 7250 0    50   ~ 0
+RST
+Text Label 10000 2800 3    50   ~ 0
+TARGET_VCC
+Wire Wire Line
+	10000 2800 10000 3350
 $EndSCHEMATC
